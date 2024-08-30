@@ -1,11 +1,11 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Dashboard from "./Views/Pages/Dashboard.vue";
-import Blog from "./Views/Pages/Blog.vue";
-import Category from "./Views/Pages/Category.vue"
+import Batch from "./Views/Pages/Batch.vue";
 
 import Main from "./Layout/Main.vue";
 import Login from "./Layout/Login.vue";
 import { getLocalStorage } from "./Helper";
+import { batchReq } from "./Config/apiRoutes";
 const routes: Array<RouteRecordRaw> = [
     {
         /* {
@@ -24,17 +24,11 @@ const routes: Array<RouteRecordRaw> = [
                 meta: { requiresAuth: true },
             },
             {
-                path: "/blog",
-                name: "Blog",
-                component: Blog,
+                path: batchReq,
+                name: "Batch",
+                component: Batch,
                 meta: { requiresAuth: true },
-            },
-            {
-                path: "/category",
-                name: "Category",
-                component: Category,
-                meta: { requiresAuth: true },
-            },
+            }
             /* {
             path: "/category",
             name: "Categories",

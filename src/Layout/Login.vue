@@ -21,9 +21,11 @@ const handleSubmit = async ()  =>{
         
         errors.value = validationErrors;
     }else{
-        if(status =="success"){
+        if(status){
             await storeLocalStorage('token',token);
-            router.push('/');
+            setTimeout(() => {
+                router.push('/');
+            }, 3000);
         }
     }
     setTimeout(() => {
