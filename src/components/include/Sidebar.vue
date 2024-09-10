@@ -17,6 +17,12 @@
                     <span>Batch</span>
                 </router-link>
             </li>
+            <li class="nav-item">
+                <router-link to="/course" class="nav-link collapsed">
+                    <i class="bi bi-grid"></i>
+                    <span>Courses</span>
+                </router-link>
+            </li>
 
             
         </ul>

@@ -1,11 +1,12 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Dashboard from "./Views/Pages/Dashboard.vue";
 import Batch from "./Views/Pages/Batch.vue";
+import Courses from "./Views/Pages/Courses.vue";
 
 import Main from "./Layout/Main.vue";
 import Login from "./Layout/Login.vue";
 import { getLocalStorage } from "./Helper";
-import { batchReq } from "./Config/apiRoutes";
+import { batchReq, courseReq } from "./Config/apiRoutes";
 const routes: Array<RouteRecordRaw> = [
     {
         /* {
@@ -28,43 +29,13 @@ const routes: Array<RouteRecordRaw> = [
                 name: "Batch",
                 component: Batch,
                 meta: { requiresAuth: true },
-            }
-            /* {
-            path: "/category",
-            name: "Categories",
-            component: Categories,
-            meta: { requiresAuth: true },
-        },
-        {
-            path: "/create-category",
-            name: "Createcategory",
-            component: Createcategory,
-            meta: { requiresAuth: true },
-        },
-        {
-            path: "/edit-category/:id",
-            name: "EditCategory",
-            component: Editcategory,
-            meta: { requiresAuth: true },
-        },
-        {
-            path: "/posts",
-            name: "PostsList",
-            component: PostsList,
-            meta: { requiresAuth: true },
-        },
-        {
-            path: "/create-post",
-            name: "CreatePost",
-            component: CreatePost,
-            meta: { requiresAuth: true },
-        },
-        {
-            path: "/edit-post/:id",
-            name: "EditPost",
-            component: EditPost,
-            meta: { requiresAuth: true },
-        }, */
+            },
+            {
+                path: courseReq,
+                name: "Course",
+                component: Courses,
+                meta: { requiresAuth: true },
+            },
         ],
     },
     {
